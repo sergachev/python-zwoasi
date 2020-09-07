@@ -190,8 +190,6 @@ def _get_video_data(id_, timeout, buffer_=None):
             sz *= 2
         buffer_ = bytearray(sz)
     else:
-        if not isinstance(buffer_, bytearray):
-            raise TypeError('Supplied buffer must be a bytearray')
         sz = len(buffer_)
     
     cbuf_type = c.c_char * len(buffer_)
